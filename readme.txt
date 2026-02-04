@@ -4,3 +4,5 @@ along side with new projects using new skills.
 
 to run the code
 npm run dev
+
+ctr + c to end the website
