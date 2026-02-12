@@ -1,11 +1,11 @@
 import React from 'react';
-import './projects.css';
+import './base.css';
 
 const Projects = () => {
   return (
-    <div className="projects">
+    <div className="section">
       <h2>Projects</h2>
-      <p>My projects will go here</p>
+      <p>Wanna see what I've been working on?</p>
     </div>
   );
 };

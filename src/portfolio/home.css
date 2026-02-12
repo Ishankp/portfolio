@@ -20,9 +20,25 @@
   word-spacing: 2px;
   margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  text-align: left;
+  text-align: center;
   align-self: flex-start;
   padding-left: 60px;
+  padding-bottom: 30px;
+}
+
+.typed-text {
+  font-size: 2.5rem;
+  color: #ffffff;
+  min-height: 70px;
+  height: 70px;
+  line-height: 1.4;
+  display: block;
+}
+
+.typed-text::after {
+  color:#ffffff;
+  content: '|';
+  margin-right: 5px;
 }
 
 .home p {

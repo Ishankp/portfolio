@@ -1,9 +1,9 @@
 import React from 'react';
-import './aboutme.css';
+import './base.css';
 
 const AboutMe = () => {
   return (
-    <div className="aboutme">
+    <div className="section">
       <h2>About Me</h2>
       <p>My story will go here</p>
     </div>

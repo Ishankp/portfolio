@@ -1,0 +1,32 @@
+.section {
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #0F172A;
+  color: white;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.section h2::before,
+.section h2::after {
+  content: '';
+  flex: 1;
+  height: 3px;
+  background: white;
+}
+
+.section p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
