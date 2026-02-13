@@ -6,7 +6,7 @@ const PortfolioPerformance = () => {
   return (
     <div className="section">
       <h2>Portfolio Performance</h2>
-      <p>Performance metrics and analytics will go here</p>
+      <p>Here is how I am going to know if you guys actually like my work</p>
     </div>
   );
 };

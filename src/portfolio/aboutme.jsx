@@ -10,15 +10,17 @@ const AboutMe = () => {
       <p>Wanna peak at who I am?</p>
       <div className="aboutme-content">
         <div className="aboutme-image">
-          <img src="https://via.placeholder.com/400x500" alt="About Me" />
+          <img src="/images.png" alt="About Me" />
         </div>
         <div className="aboutme-right">
           <div className="aboutme-text">
             <p>
-              paragraph 1
+              Hello, my name is Ishan Patel
             </p>
             <p>
-              Paragraph 2
+              I approach projects like research problems. I define metrics, benchmark results, 
+              and iterate until I can measure meaningful improvements. I’m particularly 
+              interested in systems where performance and real-world constraints matter.
             </p>
             <p>
               Paragraph 3
@@ -26,13 +28,13 @@ const AboutMe = () => {
           </div>
           <div className="aboutme-buttons">
             <div onClick={() => window.open('/resume.pdf', '_blank')}>
-              <SkillCard image="https://via.placeholder.com/40" name="Resume" />
+              <SkillCard image="/images.png" name="Resume" />
             </div>
             <div onClick={() => window.open('your-linkedin-link', '_blank')}>
-              <SkillCard image="https://via.placeholder.com/40" name="LinkedIn" />
+              <SkillCard image="/images.png" name="LinkedIn" />
             </div>
             <div onClick={() => window.open('https://github.com/Ishankp', '_blank')}>
-              <SkillCard image="https://via.placeholder.com/40" name="GitHub" />
+              <SkillCard image="/images.png" name="GitHub" />
             </div>
           </div>
         </div>

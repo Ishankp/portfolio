@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ProjectCard.css';
+import SkillCard from './SkillCard';
 
-const ProjectCard = ({ image, title, description, buttons }) => {
+const ProjectCard = ({ image, title, description, buttons, skills }) => {
+  const [showSkills, setShowSkills] = useState(false);
+
+  const handleSkillsClick = () => {
+    setShowSkills(!showSkills);
+  };
+
   return (
     <div className="project-card">
       <div className="project-image">
@@ -9,14 +16,39 @@ const ProjectCard = ({ image, title, description, buttons }) => {
       </div>
       <div className="project-content">
         <h3 className="project-title">{title}</h3>
-        <p className="project-description">{description}</p>
+        {showSkills ? (
+          <div className="project-skills">
+            {skills && skills.map((skill, index) => (
+              <SkillCard 
+                key={index}
+                image="/images.png" 
+                name={skill}
+              />
+            ))}
+          </div>
+        ) : (
+          <p className="project-description">{description}</p>
+        )}
       </div>
       <div className="project-buttons">
-        {buttons.map((button, index) => (
-          <button key={index} className="project-button" onClick={button.onClick}>
-            {button.label}
-          </button>
-        ))}
+        {buttons.map((button, index) => {
+          if (button.label === 'Skills/Tech') {
+            return (
+              <button 
+                key={index} 
+                className="project-button" 
+                onClick={handleSkillsClick}
+              >
+                {showSkills ? 'Details' : 'Skills/Tech'}
+              </button>
+            );
+          }
+          return (
+            <button key={index} className="project-button" onClick={button.onClick}>
+              {button.label}
+            </button>
+          );
+        })}
       </div>
     </div>
   );

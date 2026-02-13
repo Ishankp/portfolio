@@ -7,44 +7,48 @@ const Projects = () => {
   // Sample project data - replace with your actual projects
   const projects = [
     {
-      image: 'https://via.placeholder.com/500x200',
+      image: '/images.png',
       title: 'Titans of energy',
       description: 'A senior design project where we create a pipeline where users can create AI characters. We also included the feature wher users can implement their own models for future scalability',
+      skills: ['Python', 'AI/ML', 'Flask', 'React', 'PostgreSQL'],
       buttons: [
         { label: 'Live Demo', onClick: () => window.open('https://example.com', '_blank') },
         { label: 'GitHub', onClick: () => window.open('https://github.com', '_blank') },
-        { label: 'Details', onClick: () => alert('Project details') }
+        { label: 'Skills/Tech' }
       ]
     },
     {
-      image: 'https://via.placeholder.com/500x200',
+      image: '/images.png',
       title: 'OpenCV Multithreading optimization',
       description: 'Taking the OpenCV library and optimizing it for multithreading to improve performance in image processing tasks. This project involved analyzing the existing codebase, identifying bottlenecks, and implementing multithreading techniques to enhance the efficiency of OpenCV operations.',
+      skills: ['C++', 'OpenCV', 'Multithreading', 'Performance Optimization'],
       buttons: [
         { label: 'Live Demo', onClick: () => window.open('https://example.com', '_blank') },
         { label: 'GitHub', onClick: () => window.open('https://github.com', '_blank') },
-        { label: 'Details', onClick: () => alert('Project details') }
+        { label: 'Skills/Tech' }
       ]
     },
     // Add more projects as needed
     {
-      image: 'https://via.placeholder.com/500x200',
+      image: '/images.png',
       title: 'Efficient Energy',
       description: 'This project hepled us win secondplace in the UCF 2024 Hackathon challenge. We created an application using technology stacks unfamiliar to our team at the time. We calculate the amount of solar energy the user can generate with x amount of solar panels and how much they can save based on where they are living',
+      skills: ['JavaScript', 'React', 'Node.js', 'Solar Energy API', 'Data Analysis'],
       buttons: [
         { label: 'Live Demo', onClick: () => window.open('https://example.com', '_blank') },
-        { label: 'GitHub', onClick: () => window.open('https://github.com', '_blank') },
-        { label: 'Details', onClick: () => alert('Project details') }
+        { label: 'GitHub', onClick: () => window.open('https://github.com/mbruckert/titans-of-energy', '_blank') },
+        { label: 'Skills/Tech' }
       ]
     },
     {
-      image: 'https://via.placeholder.com/500x200',
+      image: '/images.png',
       title: 'To be continued',
       description: 'Placeholder for future projects. Stay tuned for more updates and exciting work!',
+      skills: ['Coming Soon'],
       buttons: [
         { label: 'Live Demo', onClick: () => window.open('https://example.com', '_blank') },
         { label: 'GitHub', onClick: () => window.open('https://github.com', '_blank') },
-        { label: 'Details', onClick: () => alert('Project details') }
+        { label: 'Skills/Tech' }
       ]
     },
   ];
@@ -61,6 +65,7 @@ const Projects = () => {
             title={project.title}
             description={project.description}
             buttons={project.buttons}
+            skills={project.skills}
           />
         ))}
       </div>

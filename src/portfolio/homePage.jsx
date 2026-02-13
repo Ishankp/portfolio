@@ -10,14 +10,14 @@ const HomePage = () => {
       <div id="top">
         <Home />
       </div>
+      <div id="aboutme">
+        <AboutMe />
+      </div>
       <div id="projects">
         <Projects />
       </div>
       <div id="skills">
         <Skills />
-      </div>
-      <div id="aboutme">
-        <AboutMe />
       </div>
     </>
   );

@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="home-content">
-        <h1>Ishan K. Patel</h1>
+        <h1>Ishan Patel, and I am a</h1>
         <h1 className="typed-text"></h1>
         <h2>Let me show you more about what I can do and who I am</h2>
       </div>
