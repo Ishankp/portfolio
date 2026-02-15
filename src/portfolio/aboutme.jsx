@@ -2,8 +2,20 @@ import React from 'react';
 import './base.css';
 import './aboutme.css';
 import SkillCard from '../components/SkillCard';
+import { recordButtonClick, SOCIAL_LINKS } from '../utils/analytics';
 
 const AboutMe = () => {
+  const handleButtonClick = (label, url) => {
+    recordButtonClick(`aboutme:${label}`);
+    window.open(url, '_blank');
+  };
+
+  const socialData = [
+    { key: 'resume', ...SOCIAL_LINKS.resume },
+    { key: 'linkedin', ...SOCIAL_LINKS.linkedin },
+    { key: 'github', ...SOCIAL_LINKS.github }
+  ];
+
   return (
     <div className="section">
       <h2>About Me</h2>
@@ -27,15 +39,11 @@ const AboutMe = () => {
             </p>
           </div>
           <div className="aboutme-buttons">
-            <div onClick={() => window.open('/resume.pdf', '_blank')}>
-              <SkillCard image="/images.png" name="Resume" />
-            </div>
-            <div onClick={() => window.open('your-linkedin-link', '_blank')}>
-              <SkillCard image="/images.png" name="LinkedIn" />
-            </div>
-            <div onClick={() => window.open('https://github.com/Ishankp', '_blank')}>
-              <SkillCard image="/images.png" name="GitHub" />
-            </div>
+            {socialData.map((social) => (
+              <div key={social.key} onClick={() => handleButtonClick(social.label, social.url)}>
+                <SkillCard image="/images.png" name={social.label} />
+              </div>
+            ))}
           </div>
         </div>
       </div>

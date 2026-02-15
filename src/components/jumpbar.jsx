@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './jumpbar.css';
 
 export default function Jumpbar() {
     const [isVisible, setIsVisible] = useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
         const handleScroll = () => {
             setIsVisible(window.scrollY > 100);
         };

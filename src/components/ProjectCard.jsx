@@ -1,12 +1,25 @@
 import React, { useState } from 'react';
 import './ProjectCard.css';
 import SkillCard from './SkillCard';
+import { recordButtonClick } from '../utils/analytics';
 
-const ProjectCard = ({ image, title, description, buttons, skills }) => {
+const ProjectCard = ({ image, title, description, buttons, skills, projectId }) => {
   const [showSkills, setShowSkills] = useState(false);
 
   const handleSkillsClick = () => {
+    if (projectId && !showSkills) {
+      recordButtonClick(`project:${projectId}:Skills/Tech`);
+    }
     setShowSkills(!showSkills);
+  };
+
+  const handleButtonClick = (button) => {
+    if (projectId) {
+      recordButtonClick(`project:${projectId}:${button.label}`);
+    }
+    if (typeof button.onClick === 'function') {
+      button.onClick();
+    }
   };
 
   return (
@@ -31,24 +44,15 @@ const ProjectCard = ({ image, title, description, buttons, skills }) => {
         )}
       </div>
       <div className="project-buttons">
-        {buttons.map((button, index) => {
-          if (button.label === 'Skills/Tech') {
-            return (
-              <button 
-                key={index} 
-                className="project-button" 
-                onClick={handleSkillsClick}
-              >
-                {showSkills ? 'Details' : 'Skills/Tech'}
-              </button>
-            );
-          }
-          return (
-            <button key={index} className="project-button" onClick={button.onClick}>
-              {button.label}
-            </button>
-          );
-        })}
+        {buttons.map((button, index) => (
+          <button 
+            key={index} 
+            className="project-button" 
+            onClick={button.label === 'Skills/Tech' ? handleSkillsClick : () => handleButtonClick(button)}
+          >
+            {button.label === 'Skills/Tech' && showSkills ? 'Details' : button.label}
+          </button>
+        ))}
       </div>
     </div>
   );

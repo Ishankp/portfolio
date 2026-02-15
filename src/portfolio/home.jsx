@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './home.css';
 import Typed from 'typed.js';
 
 const Home = () => {
-  React.useEffect(() => {
+  useEffect(() => {
     const typed = new Typed('.typed-text', {
       strings: ['Software Developer', 'AI/ML Enthusiast', 'Tech Fanatic'],
       typeSpeed: 50,
