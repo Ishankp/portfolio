@@ -1,11 +1,36 @@
+/* Container for all skill categories */
+.skills-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Individual skill category section */
+.skill-category {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Category title */
+.category-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0EA5E9;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #0EA5E9;
+}
+
 /* Grid layout for skill cards */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  margin-top: 40px;
   width: 100%;
-  max-width: 1200px;
 }
 
 /* Responsive design for smaller screens */
@@ -14,5 +39,10 @@
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 15px;
   }
+
+  .category-title {
+    font-size: 1.1rem;
+  }
 }
+
 

@@ -15,15 +15,15 @@ const Projects = () => {
       projectId: 'titans-of-energy',
       image: '/images.png',
       title: 'Titans of energy',
-      description: 'A senior design project where we create a pipeline where users can create AI characters. We also included the feature wher users can implement their own models for future scalability',
-      skills: ['Python', 'AI/ML', 'Flask', 'React', 'PostgreSQL'],
+      description: 'A senior design project at the University of Central Florida (UCF) where we built a modular pipeline for creating and interacting with AI-driven characters. The system supports user-defined models, enabling future scalability and experimentation with different AI architectures.',
+      skills: ['Python', 'AI/ML', 'Speech Recognition', 'Natural Language Processing', 'Real-time Systems'],
       github: 'https://github.com/mbruckert/titans-of-energy'
     },
     {
       projectId: 'opencv-multithreading',
       image: '/images.png',
-      title: 'OpenCV Multithreading optimization',
-      description: 'Taking the OpenCV library and optimizing it for multithreading to improve performance in image processing tasks. This project involved analyzing the existing codebase, identifying bottlenecks, and implementing multithreading techniques to enhance the efficiency of OpenCV operations.',
+      title: 'Benchmarking Parallel OpenCV Pipelines: Horizontal Strips vs. Quadtree Decomposition',
+      description: 'Optimized OpenCV for multithreaded image processing to improve performance. Analyzed the codebase, identified bottlenecks, and implemented parallel processing techniques to enhance efficiency.',
       skills: ['C++', 'OpenCV', 'Multithreading', 'Performance Optimization'],
       github: 'https://github.com/thawzinmoe5232/Multi-Threading-Image-Processing'
     },
@@ -31,8 +31,8 @@ const Projects = () => {
       projectId: 'efficient-energy',
       image: '/images.png',
       title: 'Efficient Energy',
-      description: 'This project hepled us win secondplace in the UCF 2024 Hackathon challenge. We created an application using technology stacks unfamiliar to our team at the time. We calculate the amount of solar energy the user can generate with x amount of solar panels and how much they can save based on where they are living',
-      skills: ['JavaScript', 'React', 'Node.js', 'Solar Energy API', 'Data Analysis'],
+      description: 'Participated in a 36-hour hackathon to develop an energy management application. Worked in a 4-person team to design, implement, and present a user-friendly solution, adapting rapidly to unfamiliar tools and APIs to meet the time-sensitive challenge.',
+      skills: ['Python', 'StreamLit', 'Solar Energy API', 'Data Analysis'],
       github: 'https://github.com/jtran6796/Efficient-Energy'
     },
     {

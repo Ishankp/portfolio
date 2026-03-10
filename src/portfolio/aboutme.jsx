@@ -5,6 +5,12 @@ import SkillCard from '../components/SkillCard';
 import { recordButtonClick, SOCIAL_LINKS } from '../utils/analytics';
 
 const AboutMe = () => {
+  const socialIcons = {
+    resume: '/icons/resume.svg',
+    linkedin: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg',
+    github: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg'
+  };
+
   const handleButtonClick = (label, url) => {
     recordButtonClick(`aboutme:${label}`);
     window.open(url, '_blank');
@@ -27,21 +33,26 @@ const AboutMe = () => {
         <div className="aboutme-right">
           <div className="aboutme-text">
             <p>
-              Hello, my name is Ishan Patel
+              Hello, my name is Ishan Patel.
             </p>
             <p>
-              I approach projects like research problems. I define metrics, benchmark results, 
-              and iterate until I can measure meaningful improvements. I’m particularly 
+              I approach projects like research problems. 
+              I define metrics, benchmark results, and iterate until 
+              I can measure meaningful improvements. I’m particularly 
               interested in systems where performance and real-world constraints matter.
             </p>
             <p>
-              Paragraph 3
+               Through projects ranging from multithreaded image processing to 
+               voice-activated AI systems, I enjoy exploring how different technologies 
+               interact to solve practical problems. I’m always looking for opportunities 
+               to build systems that are both technically efficient and useful in real-world 
+               environments.
             </p>
           </div>
           <div className="aboutme-buttons">
             {socialData.map((social) => (
               <div key={social.key} onClick={() => handleButtonClick(social.label, social.url)}>
-                <SkillCard image="/images.png" name={social.label} />
+                <SkillCard image={socialIcons[social.key]} name={social.label} />
               </div>
             ))}
           </div>

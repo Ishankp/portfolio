@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './ProjectCard.css';
 import SkillCard from './SkillCard';
 import { recordButtonClick } from '../utils/analytics';
+import { getSkillIcon } from '../utils/skillIcons';
 
 const ProjectCard = ({ image, title, description, buttons, skills, projectId }) => {
   const [showSkills, setShowSkills] = useState(false);
@@ -34,7 +35,7 @@ const ProjectCard = ({ image, title, description, buttons, skills, projectId }) 
             {skills && skills.map((skill, index) => (
               <SkillCard 
                 key={index}
-                image="/images.png" 
+                image={getSkillIcon(skill)} 
                 name={skill}
               />
             ))}
